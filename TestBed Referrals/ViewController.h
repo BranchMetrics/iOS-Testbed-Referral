@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PageContentViewController.h"
+@interface ViewController : UIViewController<UIPageViewControllerDataSource,UIPageViewControllerDelegate>
+@property (nonatomic,strong) UIPageViewController *PageViewController;
+@property (nonatomic,strong) NSArray *arrPageImages;
 
-@interface ViewController : UIViewController
-
+- (PageContentViewController *)viewControllerAtIndex:(NSUInteger)index;
 
 @end
 

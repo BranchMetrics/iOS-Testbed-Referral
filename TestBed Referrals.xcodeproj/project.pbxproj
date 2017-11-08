@@ -7,15 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EDEE8D0A12AB9C9CD348E5E9 /* libPods-TestBed Referrals.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5F76C2A36BA437D28F338A /* libPods-TestBed Referrals.a */; };
 		F138DB0E1F9E84830071DF4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F138DB0D1F9E84830071DF4E /* main.m */; };
 		F138DB111F9E84830071DF4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F138DB101F9E84830071DF4E /* AppDelegate.m */; };
 		F138DB141F9E84830071DF4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F138DB131F9E84830071DF4E /* ViewController.m */; };
 		F138DB171F9E84830071DF4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F138DB151F9E84830071DF4E /* Main.storyboard */; };
 		F138DB191F9E84830071DF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F138DB181F9E84830071DF4E /* Assets.xcassets */; };
 		F138DB1C1F9E84830071DF4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F138DB1A1F9E84830071DF4E /* LaunchScreen.storyboard */; };
+		F148EBE21FB13DC900BB7674 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F148EBE11FB13DC900BB7674 /* 1.png */; };
+		F148EBE91FB13F5200BB7674 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F148EBE71FB13F5200BB7674 /* 2.png */; };
+		F148EBEA1FB13F5200BB7674 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = F148EBE81FB13F5200BB7674 /* 3.png */; };
+		F16CD41B1FB3CDC400692AB4 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D36B811FB3CC0500D1D2E9 /* launch.png */; };
+		F16D2C841FA9335E00AFC7A0 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F16D2C831FA9335E00AFC7A0 /* PageContentViewController.m */; };
+		F1D658141F9FABEB00051967 /* ReferralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D658131F9FABEB00051967 /* ReferralViewController.m */; };
+		F1D658171F9FACB200051967 /* SetIdentityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D658161F9FACB200051967 /* SetIdentityViewController.m */; };
+		F1D6581A1F9FB72D00051967 /* ShareLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D658191F9FB72D00051967 /* ShareLinkViewController.m */; };
+		F1D6581D1F9FB77B00051967 /* AlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D6581B1F9FB77A00051967 /* AlertHelper.m */; };
+		F1D658231F9FD49300051967 /* CreditHistoryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D658221F9FD49300051967 /* CreditHistoryTVC.m */; };
+		F1D658261F9FD59C00051967 /* ReferredUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D658251F9FD59C00051967 /* ReferredUserViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		227A12C94EABA25C3F5D6D03 /* Pods-TestBed Referrals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBed Referrals.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestBed Referrals/Pods-TestBed Referrals.release.xcconfig"; sourceTree = "<group>"; };
+		4D5F76C2A36BA437D28F338A /* libPods-TestBed Referrals.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestBed Referrals.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A611FC2ED89B5A4FD4F2496A /* Pods-TestBed Referrals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBed Referrals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestBed Referrals/Pods-TestBed Referrals.debug.xcconfig"; sourceTree = "<group>"; };
 		F138DB091F9E84830071DF4E /* TestBed Referrals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TestBed Referrals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F138DB0D1F9E84830071DF4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F138DB0F1F9E84830071DF4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +41,25 @@
 		F138DB181F9E84830071DF4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F138DB1B1F9E84830071DF4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F138DB1D1F9E84830071DF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F148EBE11FB13DC900BB7674 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		F148EBE71FB13F5200BB7674 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		F148EBE81FB13F5200BB7674 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		F16D2C821FA9335E00AFC7A0 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		F16D2C831FA9335E00AFC7A0 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		F1D36B811FB3CC0500D1D2E9 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
+		F1D658111F9EC25E00051967 /* TestBed Referrals.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TestBed Referrals.entitlements"; sourceTree = "<group>"; };
+		F1D658121F9FABEB00051967 /* ReferralViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReferralViewController.h; sourceTree = "<group>"; };
+		F1D658131F9FABEB00051967 /* ReferralViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReferralViewController.m; sourceTree = "<group>"; };
+		F1D658151F9FACB200051967 /* SetIdentityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetIdentityViewController.h; sourceTree = "<group>"; };
+		F1D658161F9FACB200051967 /* SetIdentityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetIdentityViewController.m; sourceTree = "<group>"; };
+		F1D658181F9FB72D00051967 /* ShareLinkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareLinkViewController.h; sourceTree = "<group>"; };
+		F1D658191F9FB72D00051967 /* ShareLinkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareLinkViewController.m; sourceTree = "<group>"; };
+		F1D6581B1F9FB77A00051967 /* AlertHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertHelper.m; sourceTree = "<group>"; };
+		F1D6581C1F9FB77B00051967 /* AlertHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertHelper.h; sourceTree = "<group>"; };
+		F1D658211F9FD49300051967 /* CreditHistoryTVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditHistoryTVC.h; sourceTree = "<group>"; };
+		F1D658221F9FD49300051967 /* CreditHistoryTVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditHistoryTVC.m; sourceTree = "<group>"; };
+		F1D658241F9FD59C00051967 /* ReferredUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReferredUserViewController.h; sourceTree = "<group>"; };
+		F1D658251F9FD59C00051967 /* ReferredUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReferredUserViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +67,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDEE8D0A12AB9C9CD348E5E9 /* libPods-TestBed Referrals.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75108AED82C1B80A13DA68DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D5F76C2A36BA437D28F338A /* libPods-TestBed Referrals.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F138DB001F9E84830071DF4E = {
 			isa = PBXGroup;
 			children = (
 				F138DB0B1F9E84830071DF4E /* TestBed Referrals */,
 				F138DB0A1F9E84830071DF4E /* Products */,
+				F672FCD3A3672464C2BD1751 /* Pods */,
+				75108AED82C1B80A13DA68DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +103,30 @@
 		F138DB0B1F9E84830071DF4E /* TestBed Referrals */ = {
 			isa = PBXGroup;
 			children = (
+				F1D658111F9EC25E00051967 /* TestBed Referrals.entitlements */,
 				F138DB0F1F9E84830071DF4E /* AppDelegate.h */,
 				F138DB101F9E84830071DF4E /* AppDelegate.m */,
 				F138DB121F9E84830071DF4E /* ViewController.h */,
 				F138DB131F9E84830071DF4E /* ViewController.m */,
+				F16D2C821FA9335E00AFC7A0 /* PageContentViewController.h */,
+				F16D2C831FA9335E00AFC7A0 /* PageContentViewController.m */,
+				F1D658151F9FACB200051967 /* SetIdentityViewController.h */,
+				F1D658161F9FACB200051967 /* SetIdentityViewController.m */,
+				F1D658121F9FABEB00051967 /* ReferralViewController.h */,
+				F1D658131F9FABEB00051967 /* ReferralViewController.m */,
+				F1D658181F9FB72D00051967 /* ShareLinkViewController.h */,
+				F1D658191F9FB72D00051967 /* ShareLinkViewController.m */,
+				F1D658241F9FD59C00051967 /* ReferredUserViewController.h */,
+				F1D658251F9FD59C00051967 /* ReferredUserViewController.m */,
+				F1D658211F9FD49300051967 /* CreditHistoryTVC.h */,
+				F1D658221F9FD49300051967 /* CreditHistoryTVC.m */,
 				F138DB151F9E84830071DF4E /* Main.storyboard */,
+				F148EBE11FB13DC900BB7674 /* 1.png */,
+				F148EBE71FB13F5200BB7674 /* 2.png */,
+				F148EBE81FB13F5200BB7674 /* 3.png */,
+				F1D36B811FB3CC0500D1D2E9 /* launch.png */,
+				F1D6581C1F9FB77B00051967 /* AlertHelper.h */,
+				F1D6581B1F9FB77A00051967 /* AlertHelper.m */,
 				F138DB181F9E84830071DF4E /* Assets.xcassets */,
 				F138DB1A1F9E84830071DF4E /* LaunchScreen.storyboard */,
 				F138DB1D1F9E84830071DF4E /* Info.plist */,
@@ -79,6 +143,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F672FCD3A3672464C2BD1751 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A611FC2ED89B5A4FD4F2496A /* Pods-TestBed Referrals.debug.xcconfig */,
+				227A12C94EABA25C3F5D6D03 /* Pods-TestBed Referrals.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F138DB201F9E84830071DF4E /* Build configuration list for PBXNativeTarget "TestBed Referrals" */;
 			buildPhases = (
+				1D5307EC4E86A16530107DAF /* [CP] Check Pods Manifest.lock */,
 				F138DB051F9E84830071DF4E /* Sources */,
 				F138DB061F9E84830071DF4E /* Frameworks */,
 				F138DB071F9E84830071DF4E /* Resources */,
+				62527ED0658339435108E3FB /* [CP] Embed Pods Frameworks */,
+				486268CDF7FB7481134566D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -112,6 +188,11 @@
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = R63EM248DP;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -138,7 +219,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F16CD41B1FB3CDC400692AB4 /* launch.png in Resources */,
 				F138DB1C1F9E84830071DF4E /* LaunchScreen.storyboard in Resources */,
+				F148EBE21FB13DC900BB7674 /* 1.png in Resources */,
+				F148EBE91FB13F5200BB7674 /* 2.png in Resources */,
+				F148EBEA1FB13F5200BB7674 /* 3.png in Resources */,
 				F138DB191F9E84830071DF4E /* Assets.xcassets in Resources */,
 				F138DB171F9E84830071DF4E /* Main.storyboard in Resources */,
 			);
@@ -146,14 +231,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D5307EC4E86A16530107DAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestBed Referrals-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		486268CDF7FB7481134566D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestBed Referrals/Pods-TestBed Referrals-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62527ED0658339435108E3FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestBed Referrals/Pods-TestBed Referrals-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F138DB051F9E84830071DF4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F138DB141F9E84830071DF4E /* ViewController.m in Sources */,
+				F1D658141F9FABEB00051967 /* ReferralViewController.m in Sources */,
 				F138DB111F9E84830071DF4E /* AppDelegate.m in Sources */,
+				F1D658171F9FACB200051967 /* SetIdentityViewController.m in Sources */,
+				F1D6581A1F9FB72D00051967 /* ShareLinkViewController.m in Sources */,
+				F1D6581D1F9FB77B00051967 /* AlertHelper.m in Sources */,
 				F138DB0E1F9E84830071DF4E /* main.m in Sources */,
+				F16D2C841FA9335E00AFC7A0 /* PageContentViewController.m in Sources */,
+				F1D658231F9FD49300051967 /* CreditHistoryTVC.m in Sources */,
+				F1D658261F9FD59C00051967 /* ReferredUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -263,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -273,25 +416,33 @@
 		};
 		F138DB211F9E84830071DF4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A611FC2ED89B5A4FD4F2496A /* Pods-TestBed Referrals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "TestBed Referrals/TestBed Referrals.entitlements";
 				DEVELOPMENT_TEAM = R63EM248DP;
 				INFOPLIST_FILE = "TestBed Referrals/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "branch.TestBed-Referrals";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F138DB221F9E84830071DF4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 227A12C94EABA25C3F5D6D03 /* Pods-TestBed Referrals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "TestBed Referrals/TestBed Referrals.entitlements";
 				DEVELOPMENT_TEAM = R63EM248DP;
 				INFOPLIST_FILE = "TestBed Referrals/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "branch.TestBed-Referrals";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -314,6 +465,7 @@
 				F138DB221F9E84830071DF4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

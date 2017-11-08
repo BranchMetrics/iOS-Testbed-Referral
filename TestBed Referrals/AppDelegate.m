@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Branch/Branch.h"
+#import "SetIdentityViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +19,35 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    SetIdentityViewController* setIdViewController =  [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"setIdVC"];
+    [[Branch getInstance] registerDeepLinkController:setIdViewController forKey:@"deepLinked text" withPresentation:BNCViewControllerOptionShow];
+    
+    [[Branch getInstance] initSessionWithLaunchOptions:launchOptions automaticallyDisplayDeepLinkController:YES deepLinkHandler:^(NSDictionary * _Nullable params, NSError * _Nullable error) {
+        
+        NSLog(@"%@",params);
+    }];
+    
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+    pageControl.backgroundColor = [UIColor whiteColor];
+
+    
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    // handler for URI Schemes (depreciated in iOS 9.2+, but still used by some apps)
+    [[Branch getInstance] application:app openURL:url options:options];
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler {
+    // handler for Universal Links
+    [[Branch getInstance] continueUserActivity:userActivity];
+    return YES;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
