@@ -4,6 +4,13 @@
 
 - #### Educate and help Partners to implement Referral programs
 
+## Update pods
+- Go to project folder from terminal and enter 
+
+    ```bash
+    pod update
+    ```
+    
 ## Setup in Xcode
 
     - Change the Branch key in info.plist to your Branch key
