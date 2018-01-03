@@ -11,10 +11,13 @@
 #import "Branch.h"
 
 @interface ReferredUserViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *customEventTF;
-@property (weak, nonatomic) IBOutlet UILabel *creditBalanceTF;
+
 @property (weak, nonatomic) IBOutlet UITextField *redeemCreditTF;
 @property (weak, nonatomic) IBOutlet UILabel *creditBalanceLbl;
+@property (strong, nonatomic) IBOutlet UIButton *checkBalanceBtn;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *balanceCheckIndicator;
+@property (strong, nonatomic) IBOutlet UIButton *redeemBtn;
+@property (strong, nonatomic) IBOutlet UIButton *referralHistoryBtn;
 
 @end
 
@@ -23,9 +26,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.navigationItem setHidesBackButton:YES];
+    self.redeemBtn.layer.cornerRadius = 5;
+    self.redeemBtn.clipsToBounds = YES;
     
-    [self checkCreditBalance];
+    self.referralHistoryBtn.layer.cornerRadius = 5;
+    self.referralHistoryBtn.layer.borderColor = [[UIColor colorWithRed:0.0 green:115/257.0 blue:204/257.0 alpha:1] CGColor];
+    self.referralHistoryBtn.layer.borderWidth = 1.0f;
+    self.referralHistoryBtn.clipsToBounds = YES;
+    
+    [self checkCreditBalance:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,54 +42,36 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-- (IBAction)dissmissKeyboard:(UITapGestureRecognizer *)sender {
-    [self.view endEditing:YES];
-}
-
-- (IBAction)triggerCustomEvent:(UIButton *)sender {
-    
-    if (self.customEventTF.text.length != 0) {
-        Branch *branch = [Branch getInstance];
-        [branch userCompletedAction:self.customEventTF.text];
-        [branch userCompletedAction:self.customEventTF.text withState:nil withDelegate:self];
-        
-    }
-    else {
-        [AlertHelper showAlertMessageWithTitle:@"Custom event error" withMessage:@"Please enter custom event name" fromViewController:self];
-    }
-}
-
--(void)checkCreditBalance {
-    //This function would fetch the latest rewards 
+-(IBAction)checkCreditBalance: (UIButton *)sender {
+    //This function would fetch the latest rewards
+    [self.balanceCheckIndicator startAnimating];
+    self.checkBalanceBtn.hidden = YES;
     [[Branch getInstance] loadRewardsWithCallback:^(BOOL changed, NSError *error) {
+        [self.balanceCheckIndicator stopAnimating];
+        self.checkBalanceBtn.hidden = NO;
         if (!error) {
-            self.creditBalanceLbl.text = [NSString stringWithFormat:@"Credit balance: %ld",[[Branch getInstance] getCredits]];
+            self.creditBalanceLbl.text = [NSString stringWithFormat:@"%ld",[[Branch getInstance] getCredits]];
         }
     }];
 }
 
-- (IBAction)checkBalanceBtnPressed:(UIButton *)sender {
-    [self checkCreditBalance];
-}
-
 - (IBAction)redeemCreditPressed:(UIButton *)sender {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+
     [[Branch getInstance] redeemRewards:[self.redeemCreditTF.text integerValue] callback:^(BOOL success, NSError *error) {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         if (success) {
             [AlertHelper showAlertMessageWithTitle:@"Redeem Rewards" withMessage:@"Credits sucessfully redeemed" fromViewController:self];
-            [self checkCreditBalance];
+            [self checkCreditBalance:nil];
         }
         else {
             [AlertHelper showAlertMessageWithTitle:@"Redeem Rewards error" withMessage:error.localizedDescription fromViewController:self];
         }
     }];
+}
+
+- (IBAction)resignKeyboard:(UITapGestureRecognizer *)sender {
+    
+    [self.redeemCreditTF resignFirstResponder];
 }
 @end

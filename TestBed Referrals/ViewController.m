@@ -11,19 +11,18 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *pageView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageController;
-
+@property (assign,nonatomic) NSUInteger totalWalkThroughView;
 @end
 
 @implementation ViewController
-@synthesize arrPageImages;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.hidesBackButton = YES;
-
-    arrPageImages =@[@"1.png",@"2.png",@"3.png"];
-    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title = @"";
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
+    self.totalWalkThroughView = 2;
     // Create page view controller
     self.PageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
     self.PageViewController.dataSource = self;
@@ -38,7 +37,7 @@
     [self addChildViewController:self.PageViewController];
     [self.pageView addSubview:self.PageViewController.view];
     [self.PageViewController didMoveToParentViewController:self];
-    [self.pageController setNumberOfPages:arrPageImages.count];
+    [self.pageController setNumberOfPages:self.totalWalkThroughView];
 
 }
 
@@ -83,7 +82,7 @@
     }
     
     index++;
-    if (index == [self.arrPageImages count])
+    if (index == self.totalWalkThroughView)
     {
         return nil;
     }
@@ -93,7 +92,7 @@
 #pragma mark - Other Methods
 - (PageContentViewController *)viewControllerAtIndex:(NSUInteger)index
 {
-    if (([self.arrPageImages count] == 0) || (index >= [self.arrPageImages count])) {
+    if ((self.totalWalkThroughView == 0) || (index >= self.totalWalkThroughView)) {
         return nil;
     }
     
@@ -101,14 +100,14 @@
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
    
     pageContentViewController.pageIndex = index;
-    pageContentViewController.imageName = [self.arrPageImages objectAtIndex:index];
+    pageContentViewController.viewTag = index;
     return pageContentViewController;
 }
 
 #pragma mark - No of Pages Methods
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 {
-    return [self.arrPageImages count];
+    return self.totalWalkThroughView;
 }
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController

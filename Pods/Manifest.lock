@@ -1,13 +1,13 @@
 PODS:
-  - Branch (0.20.2):
-    - Branch/Core (= 0.20.2)
-  - Branch/Core (0.20.2)
+  - Branch (0.22.3):
+    - Branch/Core (= 0.22.3)
+  - Branch/Core (0.22.3)
 
 DEPENDENCIES:
   - Branch
 
 SPEC CHECKSUMS:
-  Branch: 307446a687231526f60eef0f12407ca4ed177c32
+  Branch: 0ed788929e6bfdc9b1888ecc34c3f7ffae046797
 
 PODFILE CHECKSUM: 5cb757b81dc3969406402b5d04f95bf132ec95c1
 

@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *userIdTF;
 @property (weak, nonatomic) IBOutlet UIButton *userIdBtn;
 @property (weak, nonatomic) IBOutlet UITextView *infoTextField;
+@property (strong, nonatomic) IBOutlet UIView *deepLinkBanner;
+@property (strong, nonatomic) IBOutlet UIImageView *guideBannerImageView;
 
 @end
 
@@ -21,15 +23,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSString *info;
     if (self.isReferrer) {
-        info = @"Why do we need to set Identifier for referred user?\n\n-Identifier would help uniquely identify the user who creates the and shares the referral link. \n\nIt could be an email, phone number, username etc which would uniquely identify this referrer user.\n\nIf you don't set an Identifier, you would get anonymous as the user on Dashboard";
+        self.deepLinkBanner.hidden = YES;
     }
     else {
-        info = [NSString stringWithFormat:@"You have been successfully deep linked.\n\nBefore we go ahead and redeem the credits, we need to set unique identifier which could be an email id, phone number, UUID etc.\n\nThis identifier would uniquely identify the referred user"];
+        self.deepLinkBanner.hidden = NO;
+        self.infoTextField.text = [NSString stringWithFormat:@"Before we go ahead and redeem the credits, we need to set unique identifier which could be an email id, phone number, UUID etc.\n\nThis identifier would uniquely identify the referred user."];
+        self.guideBannerImageView.image = [UIImage imageNamed:@"setId_referred"];
     }
-    self.infoTextField.text = info;
-    [self setViewBasedOnReferrer];
+    self.userIdBtn.layer.cornerRadius = 5;
+    self.userIdBtn.clipsToBounds = YES;
     self.userIdTF.delegate = self;
 }
 
@@ -38,27 +41,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 - (IBAction)resignKeyboard:(UITapGestureRecognizer *)sender {
     
     [self.userIdTF resignFirstResponder];
-}
-
--(void)setViewBasedOnReferrer {
-    
-    if (self.isReferrer) {
-        [self.view setBackgroundColor:[UIColor whiteColor]];
-        [self.userIdBtn setBackgroundColor:[UIColor lightGrayColor]];
-    }
-
 }
 
 - (IBAction)setUserBtnPressed:(UIButton *)sender {
@@ -67,7 +52,9 @@
         [AlertHelper showAlertMessageWithTitle:@"User Id error" withMessage:@"User id field cannot be empty" fromViewController:self];
     }
     else {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
         [[Branch getInstance] setIdentity:self.userIdTF.text withCallback:^(NSDictionary * _Nullable params, NSError * _Nullable error) {
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             if (!error) {
                 if (self.isReferrer) {
                     [self performSegueWithIdentifier:@"shareLinkSegue" sender:self];
@@ -86,9 +73,9 @@
     
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField*)aTextField
+- (BOOL)textFieldShouldReturn:(UITextField*)textField
 {
-    [aTextField resignFirstResponder];
+    [textField resignFirstResponder];
     return YES;
 }
 

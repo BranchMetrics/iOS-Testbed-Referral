@@ -10,6 +10,6 @@
 
 @interface PageContentViewController : UIViewController
 @property  NSUInteger pageIndex;
-@property (strong,nonatomic) NSString *imageName;
-@property (weak, nonatomic) IBOutlet UIImageView *ivScreenImage;
+@property (assign,nonatomic) NSUInteger viewTag;
+
 @end

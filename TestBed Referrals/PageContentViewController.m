@@ -10,6 +10,7 @@
 
 @interface PageContentViewController ()
 
+
 @end
 
 @implementation PageContentViewController
@@ -17,9 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.ivScreenImage.image = [UIImage imageNamed:self.imageName];
-    
+    ++self.viewTag;
+
+    for (UIView *view in self.view.subviews) {
+        view.hidden = view.tag==self.viewTag?NO:YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

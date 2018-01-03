@@ -10,6 +10,7 @@
 #import "Branch.h"
 #import "AlertHelper.h"
 @interface ShareLinkViewController ()<BranchShareLinkDelegate>
+@property (strong, nonatomic) IBOutlet UIButton *shareLinkBtn;
 
 @end
 
@@ -18,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.shareLinkBtn.layer.cornerRadius = 5;
+    self.shareLinkBtn.clipsToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,10 +81,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    
-    UIViewController *destinationViewController = segue.destinationViewController;
-    
-    destinationViewController.navigationItem.hidesBackButton = YES;
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
+    barButton.title = @"";
+    self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
+   
 }
 
 @end
