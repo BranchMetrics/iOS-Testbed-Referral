@@ -11,7 +11,7 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *pageView;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageController;
-@property (assign,nonatomic) NSUInteger totalWalkThroughView;
+@property (assign,nonatomic) NSUInteger totalWalkThroughViews;
 @end
 
 @implementation ViewController
@@ -22,7 +22,7 @@
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] init];
     barButton.title = @"";
     self.navigationController.navigationBar.topItem.backBarButtonItem = barButton;
-    self.totalWalkThroughView = 2;
+    self.totalWalkThroughViews = 2;
     // Create page view controller
     self.PageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
     self.PageViewController.dataSource = self;
@@ -37,7 +37,7 @@
     [self addChildViewController:self.PageViewController];
     [self.pageView addSubview:self.PageViewController.view];
     [self.PageViewController didMoveToParentViewController:self];
-    [self.pageController setNumberOfPages:self.totalWalkThroughView];
+    [self.pageController setNumberOfPages:self.totalWalkThroughViews];
 
 }
 
@@ -82,7 +82,7 @@
     }
     
     index++;
-    if (index == self.totalWalkThroughView)
+    if (index == self.totalWalkThroughViews)
     {
         return nil;
     }
@@ -92,7 +92,7 @@
 #pragma mark - Other Methods
 - (PageContentViewController *)viewControllerAtIndex:(NSUInteger)index
 {
-    if ((self.totalWalkThroughView == 0) || (index >= self.totalWalkThroughView)) {
+    if ((self.totalWalkThroughViews == 0) || (index >= self.totalWalkThroughViews)) {
         return nil;
     }
     
@@ -107,7 +107,7 @@
 #pragma mark - No of Pages Methods
 - (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
 {
-    return self.totalWalkThroughView;
+    return self.totalWalkThroughViews;
 }
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController

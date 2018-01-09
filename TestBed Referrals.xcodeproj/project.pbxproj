@@ -16,7 +16,6 @@
 		F138DB1C1F9E84830071DF4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F138DB1A1F9E84830071DF4E /* LaunchScreen.storyboard */; };
 		F16D2C841FA9335E00AFC7A0 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F16D2C831FA9335E00AFC7A0 /* PageContentViewController.m */; };
 		F19344B01FF6E3C50099F41D /* ic_lightbulb.png in Resources */ = {isa = PBXBuildFile; fileRef = F19344AF1FF6E3C40099F41D /* ic_lightbulb.png */; };
-		F1D658141F9FABEB00051967 /* ReferralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D658131F9FABEB00051967 /* ReferralViewController.m */; };
 		F1D658171F9FACB200051967 /* SetIdentityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D658161F9FACB200051967 /* SetIdentityViewController.m */; };
 		F1D6581A1F9FB72D00051967 /* ShareLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D658191F9FB72D00051967 /* ShareLinkViewController.m */; };
 		F1D6581D1F9FB77B00051967 /* AlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D6581B1F9FB77A00051967 /* AlertHelper.m */; };
@@ -58,8 +57,6 @@
 		F16D2C831FA9335E00AFC7A0 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
 		F19344AF1FF6E3C40099F41D /* ic_lightbulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_lightbulb.png; sourceTree = "<group>"; };
 		F1D658111F9EC25E00051967 /* TestBed Referrals.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TestBed Referrals.entitlements"; sourceTree = "<group>"; };
-		F1D658121F9FABEB00051967 /* ReferralViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReferralViewController.h; sourceTree = "<group>"; };
-		F1D658131F9FABEB00051967 /* ReferralViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReferralViewController.m; sourceTree = "<group>"; };
 		F1D658151F9FACB200051967 /* SetIdentityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetIdentityViewController.h; sourceTree = "<group>"; };
 		F1D658161F9FACB200051967 /* SetIdentityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetIdentityViewController.m; sourceTree = "<group>"; };
 		F1D658181F9FB72D00051967 /* ShareLinkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareLinkViewController.h; sourceTree = "<group>"; };
@@ -139,8 +136,6 @@
 				F16D2C831FA9335E00AFC7A0 /* PageContentViewController.m */,
 				F1D658151F9FACB200051967 /* SetIdentityViewController.h */,
 				F1D658161F9FACB200051967 /* SetIdentityViewController.m */,
-				F1D658121F9FABEB00051967 /* ReferralViewController.h */,
-				F1D658131F9FABEB00051967 /* ReferralViewController.m */,
 				F1D658181F9FB72D00051967 /* ShareLinkViewController.h */,
 				F1D658191F9FB72D00051967 /* ShareLinkViewController.m */,
 				F1E1E2D61FF705EF007B0BE7 /* CustomEventViewController.h */,
@@ -349,7 +344,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F138DB141F9E84830071DF4E /* ViewController.m in Sources */,
-				F1D658141F9FABEB00051967 /* ReferralViewController.m in Sources */,
 				F138DB111F9E84830071DF4E /* AppDelegate.m in Sources */,
 				F1D658171F9FACB200051967 /* SetIdentityViewController.m in Sources */,
 				F1D6581A1F9FB72D00051967 /* ShareLinkViewController.m in Sources */,

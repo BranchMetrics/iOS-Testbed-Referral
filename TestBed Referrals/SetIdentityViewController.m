@@ -73,6 +73,7 @@
     }
     else {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        //Branch API to set Identity
         [[Branch getInstance] setIdentity:self.userIdTF.text withCallback:^(NSDictionary * _Nullable params, NSError * _Nullable error) {
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             if (!error) {

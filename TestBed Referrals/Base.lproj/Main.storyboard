@@ -476,7 +476,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Nb-9g-gKs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Ywk-cL-J5e"/>
+                <tapGestureRecognizer id="Ywk-cL-J5e">
+                    <connections>
+                        <action selector="resignKeyboard:" destination="ywJ-yo-Muc" id="STh-aD-It1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3486.9565217391305" y="306.52173913043481"/>
         </scene>
@@ -565,7 +569,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKD-of-8m3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ZJB-n2-2S4"/>
+                <tapGestureRecognizer id="ZJB-n2-2S4">
+                    <connections>
+                        <action selector="resignKeyboard:" destination="h1C-l8-mci" id="qnD-ML-1tV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2407.5" y="291.54929577464787"/>
         </scene>
