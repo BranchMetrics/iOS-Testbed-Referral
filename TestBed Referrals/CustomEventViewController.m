@@ -32,7 +32,8 @@
 - (IBAction)triggerCustomEvent:(UIButton *)sender {
 
     if (self.customEventTF.text.length != 0) {        
-        [[BranchEvent customEventWithName:self.customEventTF.text] logEvent];
+        //[[BranchEvent customEventWithName:self.customEventTF.text] logEvent];
+        [[Branch getInstance] userCompletedAction:self.customEventTF.text];
         [self performSegueWithIdentifier:@"redeemCreditsSegue" sender:self];
     }
     else {
